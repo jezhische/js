@@ -1,0 +1,47 @@
+1. Создать функцию - конструктор, которая будет иметь внутри все свойства обьекта emplyee 
+из массива emplyeeArr;
+Example 
+let Emploee = function(id, name, surname, salary, workExperience, isPrivileges, gender){
+    /// there you code
+}
+let emplyeeObj = new Emploee(0, 'Valeriy', 'Zhmishenko', 1000, 10, true, 'male');
+emplyeeObj в результате должен содержать такой обьект -> {
+    id: 0,
+    name: 'Valeriy',
+    surname: 'Zhmishenko',
+    salary: 1000, 
+    workExperience: 10, 
+    isPrivileges: true, 
+    gender: 'male',
+}
+
+2.Добавить финкции - конструктору метод (помним про Emploee.prototype):
+    - getFullName() который вернет полное имя начиная с фамилии // 'Zhmishenko Valeriy';
+
+3.Создать новый массив emplyeeArr в котором будут содержаться те же обьекты, 
+но созданные функцией - конструктором Emploee. Новый массив должен содержать имя emplyeeConstructArr.
+
+4.Создать функцию которая вернет массив со всеми полными именами каждого employee,
+содержащегося в emplyeeConstructArr;
+getFullNamesFromArr(emplyeeConstructArr) /// ['Kupchikov Anton', 'Solomatin Mikhail', ... ]
+
+5.Создать функцию которая вернет среднее значение зарплаты всех employee
+getMidleSalary(emplyeeConstructArr) /// 1560
+
+5.Создать функцию, которая вернет рандомное значение от 0 до 10 (Читаем Math методы);
+getRundomNumber() // 7 
+
+
+Доп.задание
+1.Создать функцию которая выберет рандомного работника из массива. Вы должны учитывать в функции
+длинну массива, так как если работников 7, а рандомное число будет равно больше 7, 
+то результат будет undefined. Вы можете использовать обьявленную функцию в сомой же себе. 
+Например: 
+function getRandomNumber(maxRandom) {
+    let randomNumber = полученному рандомному числу;
+    if (randomNumber > maxRandom) {
+        getRandomNumber(maxRandom);
+    } else {
+        return randomNumber;
+    }
+}
