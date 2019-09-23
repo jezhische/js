@@ -1,0 +1,55 @@
+Создать класс Fetch.
+Класс должен содержать внутри соответсвенно 3 метода:
+get - получать всех юзеров;
+post - добавлять юзера;
+getByParams - получать юзера по параметру;
+(Примеры прикрепил в index.js).
+Вывести в консоль все три результата.
+Example
+fetch.get('/users').then(res => {
+    console.log(res);
+});
+
+Что бы запустить сервер выполняем пошагово:
+1.git clone https://github.com/ваш-юзер/ваш-репозиторий.git (или юзаем мой исходник);
+2.npm install
+3.node server.js или npm run start (запуск производим из корня проекта)
+4.Открываем в браузере http://localhost:3000;
+
+Допы как всегда по желанию
+Доп 1.
+Есть переменная let count = 2;
+Есть 2 setTimout:
+1.   setTimout(() => {
+        count = count + 1;
+    }, 2000)
+2.  setTimout(() => {
+        count = count * 2;
+    }, 3000)
+
+Создать функцию которая в console.log передаст count ( console.log(count) )
+и переменная count будет равна 5. То есть вам нужно дождаться выполнения
+второго setTimout, после его выполнения дождаться выполнения первого setTimout
+и когда последний выполнился, вывести в console count.
+Доп 2.
+Выполнить Доп 1. только с приминением async / await
+
+ДЗ
+Создать массив из 5000 книг. То есть вам нужно
+создать асинхронную функцию которая берет полученные с сервера
+книги и пушит их в массив books. Каждый get запрос возвращает объект
+в котором есть ключ items в котором есть массив из 10 книг.
+Вам нужно к url добавлять число на один больше предыдущего.
+
+Examples
+let books = [];
+const getBooks = async () => {
+    /// ваш код c вашим циклом ////
+
+    console.log(books.length) /// 5000
+}
+
+Url для получения книг (в конце число - это страница с 10 книгами)
+https://www.googleapis.com/books/v1/volumes?q=quilting=1
+https://www.googleapis.com/books/v1/volumes?q=quilting=2
+https://www.googleapis.com/books/v1/volumes?q=quilting=3

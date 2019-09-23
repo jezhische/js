@@ -1,0 +1,24 @@
+
+                https://learn.javascript.ru/searching-elements-dom
+document.querySelectorAll('ul > li:last-child') ...возвращает все элементы внутри elem, удовлетворяющие данному
+                    CSS-селектору (это может быть также не document, а конкретный element). CSS внутри - это тег, класс, id и т.д.
+elem.querySelector(css) == elem.querySelectorAll(css)[0], но действует быстрее - не подгружает всю коллекцию
+elem.closest(css)   ...ищет ближайшего предка, который соответствует CSS-селектору. Сам элемент также включается в поиск.
+document.getElementById(id) ...скорее исторические, так как querySelector более чем эффективен
+
+                https://learn.javascript.ru/bubbling-and-capturing
+this (=event.currentTarget) ...это «текущий» элемент, до которого дошло всплытие, на нём сейчас выполняется обработчик.
+event.target        ...это «целевой» элемент, на котором произошло событие, в процессе всплытия он неизменен.
+
+                https://learn.javascript.ru/event-delegation
+data-action:        <button data-toggle-id="search">.....
+elem.onclick =      this.onClick.bind(this);
+dataset:            onClick(event) {let action = event.target.dataset.toggleId;...}
+document.addEventListener('click', function(event) {....}
+
+text.scrollTop = text.scrollHeight; (по мере заполнения текстовой области текст автопрокручивается)
+
+                https://learn.javascript.ru/form-elements
+<fieldset> <legend>info</legend> </...>
+
+<div contentEditable id=....>
