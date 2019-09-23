@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>Pizza Store</title>
+</head>
+<body>
+<h1>Pizza</h1>
+<form id="sort-by-price">
+    <fieldset>
+        <legend>Сортировать по цене</legend>
+        <input type="button" id="asc" value="по возрастанию" class="sort-button">
+        <input type="button" id="desc" value="по убыванию" class="sort-button">
+        <input type="button" id="orig" value="по номеру" class="sort-button">
+    </fieldset>
+</form>
+<br><br>
+<form>
+    <fieldset>
+        <legend>Найти пиццу по названию или ингредиентам</legend>
+        <input type="text" id="search-input">
+    </fieldset>
+</form>
+
+<div id="img-container"></div>
+<script src="listOfPizzasAndCompozitions.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

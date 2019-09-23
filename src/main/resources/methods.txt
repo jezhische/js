@@ -11,7 +11,7 @@ this (=event.currentTarget) ...это «текущий» элемент, до к
 event.target        ...это «целевой» элемент, на котором произошло событие, в процессе всплытия он неизменен.
 
                 https://learn.javascript.ru/event-delegation
-data-action:        <button data-toggle-id="search">.....
+data-toggle-id:     <button data-toggle-id="search">.....
 elem.onclick =      this.onClick.bind(this);
 dataset:            onClick(event) {let action = event.target.dataset.toggleId;...}
 document.addEventListener('click', function(event) {....}
