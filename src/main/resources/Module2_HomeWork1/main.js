@@ -51,11 +51,13 @@ function searchPizza() {
 // чтобы легче получить нужное значение, берем из массива pizzaList ту пиццу, которая отображается в обрабатываемом
 // в данный момент DOM-элементе elem
                 let concordant = pizzaList.filter(item => item.id == elem.id)[0];
+// чтобы поиск был не "ИЛИ имя - ИЛИ компоненты", а "И имя, И компоненты", просто добавляем имя пиццы в
+// массив компонентов, по которому будем проводить поиск
+                concordant.composition.push(concordant.name);
 // и проверяем, содержит ли она в своем имени или составе value, полученное из инпута. Если нет,
 // убираем видимость элемента (NB здесь тернарный оператор)
-                concordant.name.toLowerCase().indexOf(value) > -1
-                    // не забываем, что composition - это массив
-                || anyMatchToArrayItems(concordant.composition, value)?
+                // не забываем, что composition - это массив
+                anyMatchToArrayItems(concordant.composition, value)?
                 // || concordant.composition.join(' ').toLowerCase().indexOf(value) > -1 ?
                 elem.style.display = 'block' : elem.style.display = 'none';
             });
