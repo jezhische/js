@@ -1,0 +1,107 @@
+.modal {
+  position: relative;
+  display: none;
+  position: fixed;
+  z-index: 1000000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    display: flex;
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    overflow-y: hidden;
+    -ms-flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: white;
+    margin: 8% auto 100px;
+    padding: 25px;
+    border: 1px solid #888;
+    text-align: center;
+    font-size: 13px;
+
+    @include screen(md) {
+      font-size: 16px;
+    }
+
+    .ingredients {
+      max-width: 80px;
+
+      @include screen(md) {
+        max-width: 100px;
+      }
+    }
+  }
+
+  &_caloricity {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6c7b82;
+  }
+
+  &_calories {
+    max-width: 50px;
+  }
+
+  &_price {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #1c2534;
+    font-weight: 600;
+  }
+
+  &_toCart {
+    width: 80%;
+    padding: 10px;
+    background: #1c2534;
+    border: 0;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #8aa825;
+    }
+  }
+
+  &_pizza_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_pizza-img {
+    max-width: 225px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  transition: 0.3s;
+  font-size: 44px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #6c7b82;
+  cursor: pointer;
+
+  &:hover {
+    color: #1c2534;
+    transform: scale(1.15);
+  }
+
+}

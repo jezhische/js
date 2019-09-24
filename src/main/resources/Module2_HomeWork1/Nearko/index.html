@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Asap+Condensed:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pizza Store</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#" class="logo-img">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <div class="credits">
+                    <span>Pizza Task</span>
+                </div>
+            </div>
+            <div class="form-wrapper">
+                <input type="search" name="search" id="searchfield" placeholder="Поиск"
+                    oninput="onInputChange(this.value)">
+                <select name="sorting" id="sort" onchange="onSelect(this.value)">
+                    <option value="1">Не сортировать</option>
+                    <option value="2">По возрастанию</option>
+                    <option value="3">По убыванию</option>
+                </select>
+
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h1 class="title section-title">ПИЦЦА</h1>
+            <div class="pizzaCards row">
+                <!-- Pizza cards here -->
+            </div>
+        </div>
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content col-10 col-md-9 col-lg-8 col-xl-4">
+            </div>
+        </div>
+    </main>
+
+    <script src="js/listOfPizzasAndCompozitions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

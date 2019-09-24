@@ -1,0 +1,82 @@
+.header {
+  padding: 10px;
+  background-color: #1c2534;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include screen(md) {
+      align-items: center;
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    &-img {
+      display: block;
+      max-width: 40px;
+  
+      @include screen(md) {
+        max-width: 50px;
+        margin-right: 20px;
+      }
+  
+      @include screen(lg) {
+        max-width: 60px;
+      }
+    }
+  }
+
+
+  .credits {
+    display: none;
+    text-transform: uppercase;
+    color: white;
+    font: 30px "Asap Condensed", sans-serif;
+
+    @include screen(lg) {
+      display: block;
+    }
+
+  }
+  .form-wrapper {
+    width: 200px;
+
+    @include screen(md) {
+      width: 300px;
+    }
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 5px;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    font-family: inherit;
+
+    &:focus {
+      @include screen(lg) {
+        box-shadow: 0px 0px 5px 3px rgba(139, 170, 37, 1);
+      }
+    }
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  select {
+    appearance: none;
+    background-image: url(../img/arrow-down.png);
+    background-position: 96% center;
+    background-repeat: no-repeat;
+  }
+
+
+}
